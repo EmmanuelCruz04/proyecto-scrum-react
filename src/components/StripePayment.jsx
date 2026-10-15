@@ -5,7 +5,7 @@ function StripePayment() {
 
   return (
     <section style={{ padding: '20px', border: '1px solid #eee', borderRadius: '8px', marginBottom: '20px' }}>
-      <h2>Pago de Anticipo (US-06)</h2>
+      <h2>Pago de Anticipo (US-10)</h2>
       <p>Anticipo requerido para asegurar la cita: <strong>$200.00 MXN</strong></p>
       {isPaid ? (
         <div style={{ color: 'green', fontWeight: 'bold' }}>✅ Anticipo pagado correctamente vía Stripe (Sandbox API).</div>

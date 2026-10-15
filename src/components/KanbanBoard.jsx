@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
 const DEFAULT_TASKS = [
-  { id: 1, title: 'US-01: Catálogo de Servicios (2 pts)', description: 'Mostrar servicios de maquillaje, peinado, cejas y pestañas con precios y tiempos.', status: 'Completado' },
-  { id: 2, title: 'US-02: Reserva de Citas (5 pts)', description: 'Permitir al cliente seleccionar fecha, hora y servicio para agendar una cita.', status: 'Completado' },
-  { id: 3, title: 'US-03: Galería / Portafolio (2 pts)', description: 'Mostrar fotografías de trabajos previos para transmitir confianza al cliente.', status: 'Completado' },
-  { id: 4, title: 'US-04: Ubicación y Contacto (1 pt)', description: 'Agregar WhatsApp y Google Maps con la ubicación del estudio.', status: 'Completado' },
-  { id: 5, title: 'US-05: Reseñas de Clientes (3 pts)', description: 'Mostrar testimonios y reseñas de clientas.', status: 'Completado' },
-  { id: 6, title: 'US-06: Pago de Anticipo en Línea (5 pts)', description: 'Integrar pasarela de pago Stripe Sandbox para cobro de depósitos.', status: 'Completado' },
-  { id: 7, title: 'US-07: Panel de Administración (3 pts)', description: 'Permitir al administrador visualizar y cambiar el estado de todas las citas.', status: 'Completado' }
+  { id: 'US-01', title: 'US-01: Catálogo de Servicios (2 pts)', description: 'Mostrar servicios de maquillaje, peinado, cejas y pestañas con precios y tiempos.', status: 'Completado' },
+  { id: 'US-02', title: 'US-02: Reserva de Citas (5 pts)', description: 'Permitir al cliente seleccionar fecha, hora y servicio para agendar una cita.', status: 'Completado' },
+  { id: 'US-03', title: 'US-03: Galería / Portafolio (2 pts)', description: 'Mostrar fotografías de trabajos previos para transmitir confianza al cliente.', status: 'Completado' },
+  { id: 'US-04', title: 'US-04: Ubicación y Contacto (1 pt)', description: 'Agregar WhatsApp y Google Maps con la ubicación del estudio.', status: 'Completado' },
+  { id: 'US-05', title: 'US-05: Reseñas de Clientes (3 pts)', description: 'Mostrar testimonios y reseñas de clientas.', status: 'Completado' },
+  { id: 'US-06', title: 'US-06: Registro e Inicio de Sesión (3 pts)', description: 'Permitir a los usuarios crear una cuenta e iniciar sesión con correo, contraseña y teléfono.', status: 'Completado' },
+  { id: 'US-07', title: 'US-07: Cancelación y Reagendamiento (3 pts)', description: 'Permitir al cliente modificar o cancelar su cita con al menos 24 horas de anticipación.', status: 'Completado' },
+  { id: 'US-08', title: 'US-08: Panel de Administración (8 pts)', description: 'Permitir al administrador visualizar, filtrar y cambiar el estado de todas las citas.', status: 'Por Hacer' },
+  { id: 'US-09', title: 'US-09: Confirmaciones y Recordatorios (5 pts)', description: 'Enviar notificaciones automáticas por correo o WhatsApp con los detalles de la reserva.', status: 'Por Hacer' },
+  { id: 'US-10', title: 'US-10: Pago de Anticipo en Línea (5 pts)', description: 'Integrar pasarela de pago para cobro de depósitos o reservas para asegurar la cita.', status: 'Por Hacer' }
 ];
-
 function KanbanBoard() {
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem('glam_studio_tasks');
