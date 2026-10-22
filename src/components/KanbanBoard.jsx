@@ -8,9 +8,9 @@ const DEFAULT_TASKS = [
   { id: 'US-05', title: 'US-05: Reseñas de Clientes (3 pts)', description: 'Mostrar testimonios y reseñas de clientas.', status: 'Completado' },
   { id: 'US-06', title: 'US-06: Registro e Inicio de Sesión (3 pts)', description: 'Permitir a los usuarios crear una cuenta e iniciar sesión con correo, contraseña y teléfono.', status: 'Completado' },
   { id: 'US-07', title: 'US-07: Cancelación y Reagendamiento (3 pts)', description: 'Permitir al cliente modificar o cancelar su cita con al menos 24 horas de anticipación.', status: 'Completado' },
-  { id: 'US-08', title: 'US-08: Panel de Administración (8 pts)', description: 'Permitir al administrador visualizar, filtrar y cambiar el estado de todas las citas.', status: 'Por Hacer' },
-  { id: 'US-09', title: 'US-09: Confirmaciones y Recordatorios (5 pts)', description: 'Enviar notificaciones automáticas por correo o WhatsApp con los detalles de la reserva.', status: 'Por Hacer' },
-  { id: 'US-10', title: 'US-10: Pago de Anticipo en Línea (5 pts)', description: 'Integrar pasarela de pago para cobro de depósitos o reservas para asegurar la cita.', status: 'Por Hacer' }
+  { id: 'US-08', title: 'US-08: Panel de Administración (8 pts)', description: 'Permitir al administrador visualizar, filtrar y cambiar el estado de todas las citas.', status: 'Completado' },
+  { id: 'US-09', title: 'US-09: Confirmaciones y Recordatorios (5 pts)', description: 'Enviar notificaciones automáticas por correo o WhatsApp con los detalles de la reserva.', status: 'Completado' },
+  { id: 'US-10', title: 'US-10: Pago de Anticipo en Línea (5 pts)', description: 'Integrar pasarela de pago para cobro de depósitos o reservas para asegurar la cita.', status: 'Completado' }
 ];
 function KanbanBoard() {
   const [tasks, setTasks] = useState(() => {
